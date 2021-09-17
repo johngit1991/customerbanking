@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        
+        stage('Checkout') {
+            steps {
+                git(
+                    url: "https://github.com/johngit1991/customerbanking.git",
+                    credentialsId: 'Git',
+                    branch: 'master'
+                 )
+             }
+        }
+     
+                stage ('maven build'){
+                  steps {
+                      sh 'mvn clean install package'
+		      sh 'cp /var/lib/jenkins/workspace/Ansible_pipeline_1/webapp/target/webapp.war .'
+				        }
+				      }
+         
+         }
+        }  
