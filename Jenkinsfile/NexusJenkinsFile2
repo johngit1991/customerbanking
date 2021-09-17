@@ -14,7 +14,7 @@ pipeline {
      
                 stage ('maven build'){
                   steps {
-                      sh 'mvn clean install package'
+                      sh 'mvn clean install package deploy'
 		      sh 'cp /var/lib/jenkins/workspace/Ansible_pipeline_1/webapp/target/webapp.war .'
 				        }
 				      }
