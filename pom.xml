@@ -6,7 +6,7 @@
 
   <groupId>com.banking</groupId>
   <artifactId>customerbanking</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.0</version>
 
   <name>customerbanking</name>
   <!-- FIXME change it to the project's website -->
